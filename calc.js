@@ -8,7 +8,7 @@ const calculator = {
     times: function(a,b) {
         return a*b;
     },
-    divide: function(a,b) {
+    divides: function(a,b) {
         return a/b;
     },
     power: function(a,b) {
@@ -16,8 +16,14 @@ const calculator = {
     }
 };
 
-console.log(calculator.plus(2,3));
-console.log(calculator.minus(2,3));
-console.log(calculator.times(2,3));
-console.log(calculator.devide(2,3));
-console.log(calculator.power(2,3));
+plus = calculator.plus(2,3);
+minus = calculator.minus(2,3);
+times = calculator.times(2,3);
+divides = calculator.divides(2,3);
+power = calculator.power(2,3);
+
+console.log(plus);
+console.log(minus);
+console.log(times);
+console.log(divides);
+console.log(power);
