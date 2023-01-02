@@ -18,5 +18,3 @@ console.log(parseInt(age));
 
 console.log(typeof 15);
 console.log(typeof parseInt(age));
-
-console.log(isNaN(age));
