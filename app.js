@@ -1,17 +1,24 @@
-const playerInfo = { //property
-    name:"minsu",
-    age: 25,
-    live: true
-};
+function sayHello(name){
+    console.log("Hello my name is " + name + "!");
+}
 
-console.log(playerInfo);
-console.log(playerInfo.age);
+sayHello("Python");
+sayHello("Java");
+sayHello("Django");
+sayHello("Ruby");
+sayHello("Go");
 
-playerInfo.live = false;
-console.log(playerInfo);
 
-playerInfo.lastName = "son";
-console.log(playerInfo); 
+function nameWithAge(a, b){
+    console.log("My name is " + a + " and " + "I am " + b + " years old!");
+}
 
-playerInfo.age += 10;
-console.log(playerInfo.age);
+nameWithAge("Minsu", 25);
+nameWithAge("HyungHoon", 24);
+
+function plus(fNum, sNum){
+    console.log(fNum+sNum);
+}
+
+plus(20, 30);
+plus(30, 70);
