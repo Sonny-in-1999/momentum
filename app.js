@@ -1,10 +1,10 @@
-const a = 5;
-const b = 2;
-const myName = "minsu";
+const me = true;
+const you = false;
 
+const mom = null; //공간차지 값이 존재함(empty)
+let dad; //let dad = undefined; 공간차지 값이 없음
 
-console.log('lalalala');
-console.log(a+b);
-console.log(a*b);
-console.log(a/b);
-console.log("hello" + myName);
+document.write(me);
+document.write(you);
+document.write(mom);
+document.write(dad);
