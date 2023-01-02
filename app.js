@@ -1,10 +1,10 @@
 const age = prompt("How old are you?");
 
-if (age <= 18) {
-    alert("You are too young to drink. Get out.");
-}
 if (isNaN(age)) {
-    alert("DD NOT FOOL AROUND.")
+    alert("Please Write your age. Don't be a fool.")
+}
+else if (age < 18) {
+    alert("You are too young to drink");
 }
 else{
     alert("Welcome!")
