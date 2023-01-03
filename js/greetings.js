@@ -5,10 +5,11 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
-
+//중요하지 않은 내용을 전부 대문자를 이용하여 저장
 
 function onLoginSubmit(event) {
     event.preventDefault();
+    //preventDefault: 브라우저의 기본 기능을 강제로 차단
     loginForm.classList.add("hidden");
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
