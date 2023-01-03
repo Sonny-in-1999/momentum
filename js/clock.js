@@ -8,6 +8,7 @@ function getClock(){
     const seconds = String(date.getSeconds()).padStart(2,"0");
     clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
+//padStart(2,"0"): 2글자를 채우지 못하면 문자 앞에 0을 붙임
 
 getClock();
 setInterval(getClock, 1000);
