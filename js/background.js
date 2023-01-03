@@ -10,3 +10,4 @@ bgImage.src = `img/${chosenImage}`;
 console.log(bgImage);
 
 document.body.appendChild(bgImage);
+//prepend: 맨 위에 생성, append: 맨 뒤에 생성
