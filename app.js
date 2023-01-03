@@ -1,34 +1,33 @@
-const age = prompt("How old are you?");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+const greeting = document.querySelector("#greeting");
 
-if (isNaN(age)) {
-    alert("Please Write your age. Don't be a fool.")
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add("hidden");
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
 }
-else if (age < 18) {
-    alert("You are too young to drink");
-}
-else if (age >= 18 && age < 50) {
-    alert("Welcome! Enjoy your time.");
-}
-else if (age >= 50 && age < 70) {
-    alert("Sir. You should do some exercise rather than drink. ");
-}
-else if (age >= 70 && age < 80) {
-    alert("Damn it. You are too old.")
-}
-else if (age >= 80 && age < 99) {
-    alert("Still alive?")
-}
-else if (age == 100) {
-    alert("Wow....")
+
+function paintGreetings(username){
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+    greeting.innerText = `Hello ${savedUsername}!`;
 }
 
 
-//parseInt: make str to int
-//typeof: return type of the var
-//isNan return true if the var is num(false if the var isn't num)
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-console.log(age);
-console.log(parseInt(age));
+if (savedUsername == null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+} 
+else{
+    paintGreetings(savedUsername);
+}
 
-console.log(typeof 15);
-console.log(typeof parseInt(age));
