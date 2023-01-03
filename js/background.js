@@ -4,6 +4,7 @@ const images = ["1.jpeg", "2.jpeg", "3.jpeg",
 const chosenImage = images[Math.floor(Math.random()*images.length)];
 
 const bgImage = document.createElement("img");
+//js에 필요한 tag를 document에서 가져옴
 
 bgImage.src = `img/${chosenImage}`;
 console.log(bgImage);
